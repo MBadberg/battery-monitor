@@ -6,11 +6,11 @@
 #define LOW_THRESHOLD 12000 // milliVolts
 #define ADC_SAMPLES 20
 #define ADC_DISPERSED 2
-#define SLEEP_SECS 3600 // 1 hour
-//#define SLEEP_SECS 15
+//#define SLEEP_SECS 3600 // 1 hour
+#define SLEEP_SECS 120 //2minutes for debugging
 
 // Set manual mode so that if no network is available, photon can go back to sleep
-SYSTEM_MODE(MANUAL);
+SYSTEM_MODE(AUTOMATIC);
 
 const float DIV_RATIO = (R1 + R2) / (float) R2;
 const char VOLTAGE_EVENT[11] = "carVoltage";
